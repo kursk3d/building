@@ -1,4 +1,4 @@
-import $ from "jquery-ts";
+// import $ from "jquery-ts";
 import {Platform} from "./platform/Platform";
 import {Screen} from "./screen/Screen";
 

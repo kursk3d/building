@@ -1,37 +1,39 @@
 // import $ from "jquery-ts";
-export class PlatformElem {
-    constructor(name) {
+var PlatformElem = /** @class */ (function () {
+    function PlatformElem(name) {
         this._name = 'base';
         this.action = $('<button/>');
         this._name = name;
     }
     // основной элемент куда все помещается
-    createStage(params) {
+    PlatformElem.prototype.createStage = function (params) {
         return $('<div/>', {
             id: this._name + '_platform',
             class: params.class,
             style: params.styleHD
         }).appendTo('body').css('font-weight', 'lighter');
-    }
-    createBaseElements(linkData, size, stage) {
-        let fon = linkData.fonLayer + size + '//fon';
-        let imgFon = new Image();
-        imgFon.addEventListener("load", (e) => {
+    };
+    PlatformElem.prototype.createBaseElements = function (linkData, size, stage) {
+        var _this = this;
+        var fon = linkData.fonLayer + size + '//fon';
+        var imgFon = new Image();
+        imgFon.addEventListener("load", function (e) {
             $(stage).css({
                 'background-image': 'url("' + fon + '")',
                 // 'background-repeat':'no-repeat',
                 'background-color': 'rgb(195, 198, 203)'
             });
-            this.action.trigger(PlatformElem.LOADED_BASE_ELEM);
+            _this.action.trigger(PlatformElem.LOADED_BASE_ELEM);
         }, false);
         imgFon.src = fon;
-    }
-    createSpinner(link, sizePlatform, stage) {
-        let spinner = new Image();
-        let jSpinner = $(spinner).on('load', (im) => {
+    };
+    PlatformElem.prototype.createSpinner = function (link, sizePlatform, stage) {
+        var _this = this;
+        var spinner = new Image();
+        var jSpinner = $(spinner).on('load', function (im) {
             jSpinner.appendTo(stage).hide().fadeIn('slow');
             console.log('SPINNER_LOADED');
-            this.action.trigger(PlatformElem.SPINNER_LOADED);
+            _this.action.trigger(PlatformElem.SPINNER_LOADED);
             console.log('spinner.width', spinner.width);
             jSpinner.css({
                 //TODO надо размеры спинера вывести на уровень верх а то они не читаеются
@@ -46,10 +48,10 @@ export class PlatformElem {
             src: link + '/ah/' + sizePlatform.size + '//spiner',
         });
         return jSpinner;
-    }
-    createBtnClose(link, btnData, stage) {
-        let close = new Image();
-        let btnClose = $(close).on('load', (im) => {
+    };
+    PlatformElem.prototype.createBtnClose = function (link, btnData, stage) {
+        var close = new Image();
+        var btnClose = $(close).on('load', function (im) {
             btnClose.appendTo(stage).hide().fadeIn('slow');
             btnClose.css({
                 position: 'fixed',
@@ -63,7 +65,9 @@ export class PlatformElem {
             style: 'cursor:pointer'
         });
         return btnClose;
-    }
-}
-PlatformElem.SPINNER_LOADED = 'spiner-load';
-PlatformElem.LOADED_BASE_ELEM = 'loaded-base_elements';
+    };
+    PlatformElem.SPINNER_LOADED = 'spiner-load';
+    PlatformElem.LOADED_BASE_ELEM = 'loaded-base_elements';
+    return PlatformElem;
+}());
+export { PlatformElem };

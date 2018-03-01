@@ -1,14 +1,14 @@
 import { ContactsGD } from "./frame/gd/gdContacts/ContactsGD";
-export class ContactsBuilding {
-    constructor() {
-        // alert('!!!!!!!!!!!!');
-        console.log('!!!!!!!console!!!!!');
+var ContactsBuilding = /** @class */ (function () {
+    function ContactsBuilding() {
+        var _this = this;
         this.contacts = new ContactsGD({ btnClose: true });
         this.contacts.show();
-        this.contacts.action.one(ContactsGD.PLATFORM_CLOSE, () => {
-            this.contacts.close();
-            console.log('close ContactsGD');
+        this.contacts.action.one(ContactsGD.PLATFORM_CLOSE, function () {
+            _this.contacts.close();
         });
     }
-}
-let cntBuilding = new ContactsBuilding();
+    return ContactsBuilding;
+}());
+export { ContactsBuilding };
+var cntBuilding = new ContactsBuilding();

@@ -44,19 +44,6 @@ module.exports = {
             name: "common"
         }),
         // new webpack.IgnorePlugin(/jquery-ts/)
-
-        new UglifyJsPlugin({
-            uglifyOptions: {
-                comments: false,
-                compress: {
-                    // remove warnings
-                    warnings: false,
-
-                    // Drop console statements
-                    drop_console: true
-                }
-            }
-        })
     ]
 
 
