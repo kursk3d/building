@@ -1,0 +1,18 @@
+{
+  "name": "Building",
+  "version": "0.1.0",
+  "description": "Building Desk",
+  "author": "kursk3dynamic@gmail.com",
+  "license": "MIT",
+  "homepage": "http://xn--c1acae4aoap.xn--p1ai/",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "jquery-ts": "^2.1.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {}
+}

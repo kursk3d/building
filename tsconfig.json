@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "es2016"],
+    "jsx": "preserve",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    // Нужно указать откуда тайпинги Phaser'а явно, т.к. в данной папке
+    // содержатся несколько разных их версий, которые будут конфликтовать между
+    // собой.
+    "./node_modules/jquery-ts/index.d.ts"
+  ],
+  "include": [
+    "./node_modules/@types/**/*.ts",
+    "typings/**/*.ts"
+  ],
+  "exclude": [ "node_modules" ],
+  "scripts": [
+//    "../node_modules/jquery/dist/jquery.js"
+  ]
+}

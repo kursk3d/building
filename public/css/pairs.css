@@ -1,0 +1,162 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+}
+body{
+    /*font-family: 'Comfortaa', cursive;*/
+    /*font-family: 'Poiret One', cursive;*/
+    font-family: 'Jura', sans-serif;
+    /*font-family: 'Play', sans-serif;*/
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+.scroll::-webkit-scrollbar {
+    width: 1em;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+a{
+    text-decoration: none;
+}
+.aOne-white{
+    color: white;
+    text-decoration: none;
+}
+#frame{
+    font-family: 'Comfortaa', cursive;
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    /*background-color: rgb(203, 206, 211);*/
+}
+#pair{
+}
+#frame-pair_close{
+}
+
+
+/*preloaders START*/
+.spinner-one{
+    -webkit-animation:spin-one 1s linear infinite;
+    -moz-animation:spin-one 1s linear infinite;
+    animation:spin-one 1s linear infinite;
+}
+@-moz-keyframes spin-one { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin-one { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin-one { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+/*preloaders END*/
+
+
+
+/*TriumphalArch*/
+.triumphal-arch-fig{
+
+}
+.triumphal-arch-cap{
+    /*width: auto;*/
+    /*height: auto;*/
+    text-align: center;
+}
+
+/*TriumphalArch END*/
+
+.contacts-foto {
+}
+
+
+.btnOneBoxed{
+    margin: 5px 15px 5px 15px;
+    padding: 5px 15px 5px 15px;
+    line-height: 50px;
+}
+
+/**/
+.btn {
+    display: inline;
+
+    /*height: 50px;*/
+    height: auto;
+    text-align: center;
+    width: auto;
+    cursor: pointer;
+}
+
+/*
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+.btn-one span {
+    transition: all 0.3s;
+}
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+    /*letter-spacing: 2px;*/
+    font-weight: bold;
+}
+.btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
