@@ -19,7 +19,7 @@
     // Нужно указать откуда тайпинги Phaser'а явно, т.к. в данной папке
     // содержатся несколько разных их версий, которые будут конфликтовать между
     // собой.
-    "./node_modules/jquery-ts/index.d.ts"
+//    "./node_modules/jquery-ts/index.d.ts"
   ],
   "include": [
     "./node_modules/@types/**/*.ts",
