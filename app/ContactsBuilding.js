@@ -12,4 +12,3 @@ var ContactsBuilding = /** @class */ (function () {
     return ContactsBuilding;
 }());
 export { ContactsBuilding };
-var cntBuilding = new ContactsBuilding();

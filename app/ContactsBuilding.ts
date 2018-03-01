@@ -14,4 +14,3 @@ contacts:ContactsGD;
 
     }
 }
-let cntBuilding = new ContactsBuilding();
