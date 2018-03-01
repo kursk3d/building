@@ -1,8 +1,6 @@
-var StyleColor = /** @class */ (function () {
-    function StyleColor() {
+export class StyleColor {
+    constructor() {
         this.white = 'color:white;';
         this.black = 'color:white;';
     }
-    return StyleColor;
-}());
-export { StyleColor };
+}

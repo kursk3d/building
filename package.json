@@ -6,7 +6,8 @@
   "license": "MIT",
   "homepage": "http://xn--c1acae4aoap.xn--p1ai/",
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "webpack-production": "webpack --config webpack.production.config.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

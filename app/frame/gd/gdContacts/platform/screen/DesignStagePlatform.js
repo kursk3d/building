@@ -1,6 +1,5 @@
-var DesignStagePlatform = /** @class */ (function () {
-    function DesignStagePlatform(name) {
-        if (name === void 0) { name = 'def_stage-platform'; }
+export class DesignStagePlatform {
+    constructor(name = 'def_stage-platform') {
         this.name = '';
         this._width = 0;
         this._height = 0;
@@ -12,86 +11,44 @@ var DesignStagePlatform = /** @class */ (function () {
         this.btnClose = { size: 10 };
         this.name = name;
     }
-    Object.defineProperty(DesignStagePlatform.prototype, "styleBase", {
-        set: function (str) {
-            this._styleBase = str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "addStyleBase", {
-        set: function (str) {
-            this._styleBase += str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "addStyle", {
-        set: function (str) {
-            this._style += str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "style", {
-        get: function () {
-            return this._style;
-        },
-        set: function (str) {
-            this._style = str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "styleHD", {
-        get: function () {
-            return this._styleBase + this._style;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "classBase", {
-        set: function (str) {
-            this._classBase = str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "addClassBase", {
-        set: function (str) {
-            this._classBase += str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "addClass", {
-        set: function (str) {
-            this._class += ' ' + str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "class", {
-        get: function () {
-            return this._class;
-        },
-        set: function (str) {
-            this._class = str;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DesignStagePlatform.prototype, "classHD", {
-        get: function () {
-            return this._classBase + this._class;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    DesignStagePlatform.prototype.setSize = function (width, height) {
+    set styleBase(str) {
+        this._styleBase = str;
+    }
+    set addStyleBase(str) {
+        this._styleBase += str;
+    }
+    set addStyle(str) {
+        this._style += str;
+    }
+    get style() {
+        return this._style;
+    }
+    set style(str) {
+        this._style = str;
+    }
+    get styleHD() {
+        return this._styleBase + this._style;
+    }
+    set classBase(str) {
+        this._classBase = str;
+    }
+    set addClassBase(str) {
+        this._classBase += str;
+    }
+    set addClass(str) {
+        this._class += ' ' + str;
+    }
+    set class(str) {
+        this._class = str;
+    }
+    get class() {
+        return this._class;
+    }
+    get classHD() {
+        return this._classBase + this._class;
+    }
+    setSize(width, height) {
         this._width = width;
         this._height = height;
-    };
-    return DesignStagePlatform;
-}());
-export { DesignStagePlatform };
+    }
+}

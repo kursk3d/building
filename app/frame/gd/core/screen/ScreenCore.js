@@ -1,8 +1,8 @@
 /*
 * Задача класса определять характеристики экрана устройства
 * */
-var ScreenCore = /** @class */ (function () {
-    function ScreenCore() {
+export class ScreenCore {
+    constructor() {
         // Доступные размеры экрана
         this.wScreen = 0;
         this.hScreen = 0;
@@ -14,7 +14,7 @@ var ScreenCore = /** @class */ (function () {
         this.orientwInfoScreen = 'HZ';
         this.screenCurrentSize();
     }
-    ScreenCore.prototype.screenCurrentSize = function () {
+    screenCurrentSize() {
         this.wScreen = window.innerWidth;
         this.hScreen = window.innerHeight;
         if (this.wScreen > this.hScreen) {
@@ -26,29 +26,17 @@ var ScreenCore = /** @class */ (function () {
             this.orientwInfoScreen = 'vertical';
         }
         console.log('Доступная область отрисовки wScreen:', this.wScreen, ' hScreen', this.hScreen);
-    };
-    Object.defineProperty(ScreenCore.prototype, "screenW", {
-        get: function () {
-            return this.wScreen;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ScreenCore.prototype, "screenH", {
-        get: function () {
-            return this.hScreen;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ScreenCore.prototype, "currentOrientScreen", {
-        get: function () {
-            return this.orientScreen;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ScreenCore.prototype.getOrientScreenWhat = function (nameScreen) {
+    }
+    get screenW() {
+        return this.wScreen;
+    }
+    get screenH() {
+        return this.hScreen;
+    }
+    get currentOrientScreen() {
+        return this.orientScreen;
+    }
+    getOrientScreenWhat(nameScreen) {
         console.log('Ориентация экрана ' + this.orientScreen);
         if (this.orientScreen == nameScreen) {
             return true;
@@ -56,10 +44,8 @@ var ScreenCore = /** @class */ (function () {
         else {
             return false;
         }
-    };
-    ScreenCore.WIDESCREEN = 'widescreen'; // 19x9
-    ScreenCore.WIDESCREEN_HSMALL = 'widescreen_hsmall';
-    ScreenCore.NARROWCREEN = 'narrow-screen';
-    return ScreenCore;
-}());
-export { ScreenCore };
+    }
+}
+ScreenCore.WIDESCREEN = 'widescreen'; // 19x9
+ScreenCore.WIDESCREEN_HSMALL = 'widescreen_hsmall';
+ScreenCore.NARROWCREEN = 'narrow-screen';
